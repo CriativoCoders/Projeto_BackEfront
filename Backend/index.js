@@ -12,10 +12,12 @@ app.use(cors());
 // Array de usuários
 const users = [
     {
-        name: 'Talita',
+        name: talita,
         age: 18,
     },
+
 ];
+
 
 // Rota GET para listar usuários
 app.get('/usuarios', function (request, response) {
@@ -32,6 +34,7 @@ app.post('/usuarios', function (request, response) {
 
     response.status(201).json(newUser);
 });
+
 
 // Corrigindo `application` para `app` na inicialização do servidor
 app.listen(3001, () => console.log("Servidor rodando na porta 3001"));
